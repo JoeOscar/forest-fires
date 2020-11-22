@@ -15,8 +15,6 @@ sys.path.append(main_dir_loc + 'capyle/guicomponents')
 from capyle.ca import Grid2D, Neighbourhood, randomise2d
 import capyle.utils as utils
 
-def aRGB(x,y,z):
-    return (x/255),(y/255),(z/255)
 
 def setup(args):
     """Set up the config object used to interact with the GUI"""
@@ -25,15 +23,14 @@ def setup(args):
     # -- THE CA MUST BE RELOADED IN THE GUI IF ANY OF THE BELOW ARE CHANGED --
     config.title = "NAME"
     config.dimensions = 2
-    config.states = (0, 1)
+    config.states = STATES
     
     # -------------------------------------------------------------------------
 
     # ---- Override the defaults below (these may be changed at anytime) ----
-    green = aRGB(180, 238, 180)
-    fire = aRGB(178, 34, 34)
-    config.state_colors = [green, fire]#[(180,238,180),(178,34,34)]
-    config.grid_dims = (100, 100)
+
+    # config.state_colors = [(0,0,0),(1,1,1)]
+    # config.grid_dims = (200, 200)
     # ---------------------------------------------------------------------
 
     # the GUI calls this to pass the user defined config

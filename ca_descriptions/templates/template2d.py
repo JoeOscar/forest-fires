@@ -33,8 +33,8 @@ def transition_function(grid, neighbourstates, neighbourcounts):
     grid[birth | survive] = 1
     return grid
 
-# def aRGB(x,y,z):
-    # return (x/255),(y/255),(z/255)
+def aRGB(x,y,z):
+    return (x/255),(y/255),(z/255)
 
 # cell states
 CHAPARRAL = 0
